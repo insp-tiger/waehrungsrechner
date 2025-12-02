@@ -242,7 +242,7 @@
             resultAmount.innerText = `${formatNumber(converted)} ${to}`;
 
             // Wise-Berechnung (0,58% Abzug)
-            const amountWithFee = converted * 0.9942;
+            const amountWithFee = converted * 1.006;
             
             wiseFeeText.innerText = `ca. mit Wise: ${formatNumber(amountWithFee)} ${to}`;
         }
