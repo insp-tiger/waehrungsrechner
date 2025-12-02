@@ -130,37 +130,37 @@
             <div>
                 <label class="label">Von</label>
                 <select id="from-currency">
-                    <option value="EUR">🇪🇺 EUR</option>
-                    <option value="CZK" selected>🇨🇿 CZK</option>
-                    <option value="USD">🇺🇸 USD</option>
-                    <option value="HUF">🇭🇺 HUF</option>
-                    <option value="GBP">🇬🇧 GBP</option>
-                    <option value="ZAR">🇿🇦 ZAR</option>
-                    <option value="CHF">🇨🇭 CHF</option>
-                    <option value="JPY">🇯🇵 JPY</option>
+                    <option value="EUR">&#127466;&#127482; EUR</option>
+                    <option value="CZK" selected>&#127464;&#127487; CZK</option>
+                    <option value="USD">&#127482;&#127480; USD</option>
+                    <option value="HUF">&#127469;&#127482; HUF</option>
+                    <option value="GBP">&#127468;&#127463; GBP</option>
+                    <option value="ZAR">&#127487;&#127462; ZAR</option>
+                    <option value="CHF">&#127464;&#127469; CHF</option>
+                    <option value="JPY">&#127471;&#127477; JPY</option>
                 </select>
             </div>
-            <button class="swap-btn" id="swap-btn" title="Tauschen">⇄</button>
+            <button class="swap-btn" id="swap-btn" title="Tauschen">&#8644;</button>
             <div>
                 <label class="label">Zu</label>
                 <select id="to-currency">
-                    <option value="EUR" selected>🇪🇺 EUR</option>
-                    <option value="CZK">🇨🇿 CZK</option>
-                    <option value="USD">🇺🇸 USD</option>
-                    <option value="HUF">🇭🇺 HUF</option>
-                    <option value="GBP">🇬🇧 GBP</option>
-                    <option value="ZAR">🇿🇦 ZAR</option>
-                    <option value="CHF">🇨🇭 CHF</option>
-                    <option value="JPY">🇯🇵 JPY</option>
+                    <option value="EUR" selected>&#127466;&#127482; EUR</option>
+                    <option value="CZK">&#127464;&#127487; CZK</option>
+                    <option value="USD">&#127482;&#127480; USD</option>
+                    <option value="HUF">&#127469;&#127482; HUF</option>
+                    <option value="GBP">&#127468;&#127463; GBP</option>
+                    <option value="ZAR">&#127487;&#127462; ZAR</option>
+                    <option value="CHF">&#127464;&#127469; CHF</option>
+                    <option value="JPY">&#127471;&#127477; JPY</option>
                 </select>
             </div>
         </div>
         <div class="favorites-section">
             <div class="label">Schnellwahl</div>
             <div class="favorites-grid">
-                <button class="fav-btn" onclick="setFavorite('CZK', 'EUR')">CZK ⇄ EUR</button>
-                <button class="fav-btn" onclick="setFavorite('ZAR', 'EUR')">ZAR ⇄ EUR</button>
-                <button class="fav-btn" onclick="setFavorite('GBP', 'EUR')">GBP ⇄ EUR</button>
+                <button class="fav-btn" onclick="setFavorite('CZK', 'EUR')">CZK &#8644; EUR</button>
+                <button class="fav-btn" onclick="setFavorite('ZAR', 'EUR')">ZAR &#8644; EUR</button>
+                <button class="fav-btn" onclick="setFavorite('GBP', 'EUR')">GBP &#8644; EUR</button>
             </div>
         </div>
         
@@ -284,7 +284,7 @@
                 // Falls alte Daten im LocalStorage sind ohne 'displayAmount', Fallback nutzen
                 const displayAmt = item.displayAmount || formatNumber(item.rawAmount || parseFloat(item.amount));
                 
-                li.innerHTML = `<span class="history-values">${displayAmt} ${item.from} ➔ ${item.result} ${item.to}</span><span class="history-date">${item.time}</span>`;
+                li.innerHTML = `<span class="history-values">${displayAmt} ${item.from} &#8594; ${item.result} ${item.to}</span><span class="history-date">${item.time}</span>`;
                 historyListEl.appendChild(li);
             });
         }
