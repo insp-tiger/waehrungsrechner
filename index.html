@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Währungsrechner - Sunset</title>
+    <title>WÃ¤hrungsrechner - Sunset</title>
     <style>
         :root {
-            --primary-color: #ea580c; /* Kräftiges Orange */
+            --primary-color: #ea580c; /* KrÃ¤ftiges Orange */
             --primary-dark: #c2410c;
-            --text-color: #431407;    /* Sehr dunkles Braun für Kontrast */
-            --text-muted: #9a3412;    /* Gedämpftes Rostrot */
+            --text-color: #431407;    /* Sehr dunkles Braun fÃ¼r Kontrast */
+            --text-muted: #9a3412;    /* GedÃ¤mpftes Rostrot */
             --border-radius: 30px;
         }
 
@@ -79,7 +80,7 @@
         }
         .fav-btn:hover { background: white; transform: translateY(-2px); box-shadow: 0 4px 10px rgba(234, 88, 12, 0.15); border-color: var(--primary-color); }
 
-        /* Ergebnis-Box: Nur Rahmen statt Füllung */
+        /* Ergebnis-Box: Nur Rahmen statt FÃ¼llung */
         .result-box {
             background: rgba(255, 255, 255, 0.4); 
             border: 2px solid var(--primary-color); 
@@ -92,7 +93,7 @@
         .result-amount { font-size: 2.2rem; font-weight: 800; color: var(--primary-dark); }
         .result-label { font-size: 0.95rem; opacity: 0.9; font-weight: 600; }
         
-        /* Style für den Gebühren-Text */
+        /* Style fÃ¼r den GebÃ¼hren-Text */
         .wise-fee-text {
             font-size: 0.8rem;
             color: var(--text-muted);
@@ -129,37 +130,37 @@
             <div>
                 <label class="label">Von</label>
                 <select id="from-currency">
-                    <option value="EUR">🇪🇺 EUR</option>
-                    <option value="CZK" selected>🇨🇿 CZK</option>
-                    <option value="USD">🇺🇸 USD</option>
-                    <option value="HUF">🇭🇺 HUF</option>
-                    <option value="GBP">🇬🇧 GBP</option>
-                    <option value="ZAR">🇿🇦 ZAR</option>
-                    <option value="CHF">🇨🇭 CHF</option>
-                    <option value="JPY">🇯🇵 JPY</option>
+                    <option value="EUR">ðŸ‡ªðŸ‡º EUR</option>
+                    <option value="CZK" selected>ðŸ‡¨ðŸ‡¿ CZK</option>
+                    <option value="USD">ðŸ‡ºðŸ‡¸ USD</option>
+                    <option value="HUF">ðŸ‡­ðŸ‡º HUF</option>
+                    <option value="GBP">ðŸ‡¬ðŸ‡§ GBP</option>
+                    <option value="ZAR">ðŸ‡¿ðŸ‡¦ ZAR</option>
+                    <option value="CHF">ðŸ‡¨ðŸ‡­ CHF</option>
+                    <option value="JPY">ðŸ‡¯ðŸ‡µ JPY</option>
                 </select>
             </div>
-            <button class="swap-btn" id="swap-btn" title="Tauschen">⇄</button>
+            <button class="swap-btn" id="swap-btn" title="Tauschen">â‡„</button>
             <div>
                 <label class="label">Zu</label>
                 <select id="to-currency">
-                    <option value="EUR" selected>🇪🇺 EUR</option>
-                    <option value="CZK">🇨🇿 CZK</option>
-                    <option value="USD">🇺🇸 USD</option>
-                    <option value="HUF">🇭🇺 HUF</option>
-                    <option value="GBP">🇬🇧 GBP</option>
-                    <option value="ZAR">🇿🇦 ZAR</option>
-                    <option value="CHF">🇨🇭 CHF</option>
-                    <option value="JPY">🇯🇵 JPY</option>
+                    <option value="EUR" selected>ðŸ‡ªðŸ‡º EUR</option>
+                    <option value="CZK">ðŸ‡¨ðŸ‡¿ CZK</option>
+                    <option value="USD">ðŸ‡ºðŸ‡¸ USD</option>
+                    <option value="HUF">ðŸ‡­ðŸ‡º HUF</option>
+                    <option value="GBP">ðŸ‡¬ðŸ‡§ GBP</option>
+                    <option value="ZAR">ðŸ‡¿ðŸ‡¦ ZAR</option>
+                    <option value="CHF">ðŸ‡¨ðŸ‡­ CHF</option>
+                    <option value="JPY">ðŸ‡¯ðŸ‡µ JPY</option>
                 </select>
             </div>
         </div>
         <div class="favorites-section">
             <div class="label">Schnellwahl</div>
             <div class="favorites-grid">
-                <button class="fav-btn" onclick="setFavorite('CZK', 'EUR')">CZK ⇄ EUR</button>
-                <button class="fav-btn" onclick="setFavorite('ZAR', 'EUR')">ZAR ⇄ EUR</button>
-                <button class="fav-btn" onclick="setFavorite('GBP', 'EUR')">GBP ⇄ EUR</button>
+                <button class="fav-btn" onclick="setFavorite('CZK', 'EUR')">CZK â‡„ EUR</button>
+                <button class="fav-btn" onclick="setFavorite('ZAR', 'EUR')">ZAR â‡„ EUR</button>
+                <button class="fav-btn" onclick="setFavorite('GBP', 'EUR')">GBP â‡„ EUR</button>
             </div>
         </div>
         
@@ -252,7 +253,7 @@
             const resultStr = formatNumber(result);
             
             // Um Duplikate zu vermeiden, speichern wir intern die Rohwerte, aber anzeigen tun wir formatiert
-            // Wir prüfen nur grob auf Änderung, um Spam zu vermeiden
+            // Wir prÃ¼fen nur grob auf Ã„nderung, um Spam zu vermeiden
             if (conversionHistory.length > 0) { 
                 const last = conversionHistory[0]; 
                 // Vergleich auf Basis der Rohwerte (Eingabe)
@@ -283,7 +284,7 @@
                 // Falls alte Daten im LocalStorage sind ohne 'displayAmount', Fallback nutzen
                 const displayAmt = item.displayAmount || formatNumber(item.rawAmount || parseFloat(item.amount));
                 
-                li.innerHTML = `<span class="history-values">${displayAmt} ${item.from} ➔ ${item.result} ${item.to}</span><span class="history-date">${item.time}</span>`;
+                li.innerHTML = `<span class="history-values">${displayAmt} ${item.from} âž” ${item.result} ${item.to}</span><span class="history-date">${item.time}</span>`;
                 historyListEl.appendChild(li);
             });
         }
